@@ -52,14 +52,21 @@
     color: white;
     font-size: 12px;
 }
-ul{
+.itemss{
     margin-top:30px;
+    margin-left:50px;
+    border:0 solid darkgray;
+    border-radius: 3px;
+    height:240px;
+    overflow: auto;
+}
+ul{
 }
 .itemss ul li{
     border: 0.2px solid darkgray;
     padding:10px;
     width:650px;
-    margin-left: 50px;
+    height:40px;
     border-radius: 3px;
     display: flex;
     flex-direction: row;
@@ -87,15 +94,11 @@ ul li.checked::before{
     background-image: url("content/checked.svg");
 }
 ul li span{
-    position: absolute;
-    right:0;
-    text-align: center;
-    margin-right: 375px;
-    margin-top:-5px;
+    flex:1;
+    text-align: right;
+    margin-top: -3px;
 }
-ul li span:hover{
-    background: #8a8a8a;
-}
+
 
 
 

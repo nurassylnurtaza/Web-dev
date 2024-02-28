@@ -1,0 +1,20 @@
+.buttons{
+    display: flex;
+    flex-direction: row;
+    margin-top: -10px;
+    margin-bottom: 5px;
+}
+.buttons button{
+    width:30px;
+    height:10px;
+    color: black;
+
+}
+.buttons img{
+    width: 30px;
+    height: 10px;
+}
+button{
+    background-color: white;
+    border-style: none;
+}

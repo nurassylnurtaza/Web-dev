@@ -1,0 +1,44 @@
+<h2>Products</h2>
+<div class="wrapper">
+<div class="wrapper-categories">
+    <div class="wrapper-category" *ngFor="let category of categories">
+        <button (click)="changeCategory(category)" type="button">
+            {{category}}
+        </button>
+    </div>
+</div>
+    <div class="wrapper-container" *ngIf="changeCategory(currcategory).length > 0">
+<div class ='container' *ngFor="let product of changeCategory(currcategory); let a = index">
+    <div class="images">
+        <img src="{{product.image.at(product.i)}}">
+        <button *ngIf="product.image.length > 1" (click)="nextImage(a)"> > </button>
+    </div>
+    <h3>
+        <a href="{{product.reference}}" target="_blank" [title]="product.name + ' details'">
+            {{ product.name }}
+        </a>
+    </h3>
+    <div class="rating">
+        <img src="/assets/images/red-star.jpeg">
+        <h4>{{product.rating}}</h4>
+    </div>
+  <p *ngIf="product.description">
+        Описание: {{product.description}}
+  </p>
+    <p>
+        Лайки: {{product.likes}}
+    </p>
+
+    <app-product-item
+            [product]="product"
+            (updateLike)="updatedLike($event, product)"
+            (updateDelete)="delete(product)"
+    ></app-product-item>
+
+  <button (click)="share(product.reference)">
+    Share
+  </button>
+    </div>
+    </div>
+</div>
+

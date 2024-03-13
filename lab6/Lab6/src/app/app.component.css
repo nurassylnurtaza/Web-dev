@@ -1,0 +1,19 @@
+ul{
+  display: flex;
+  flex-direction: row;
+  border: solid 1px #77b9e5;
+  padding: 50px;
+}
+ul li{
+  margin-right: 400px;
+  font-size: 50px;
+  list-style: none;
+}
+ul li a{
+  text-decoration: none;
+  color: #77b9e5;
+}
+h2{
+  color: #77b9e5;
+  font-size: 50px;
+}

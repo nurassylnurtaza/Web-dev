@@ -1,0 +1,10 @@
+<button (click)="returnBack()">Return Back</button>
+
+<h3>{{album.id}} - {{album.title}}</h3>
+<h2>
+  <a routerLink="/albums/{{ album.id }}/photos">Photos</a>
+</h2>
+<fieldset>
+  <input type="text" [(ngModel)]="newTitle" name="title" placeholder="Enter new title">
+  <button (click)="saveTitle()">Save</button>
+</fieldset>

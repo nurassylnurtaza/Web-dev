@@ -1,0 +1,6 @@
+<h1>{{album.title}} - {{album.id}}</h1>
+<button (click)="returnBack()">Return Back</button>
+<div class="wrapper-info-photos-photo" *ngFor="let photo of photos">
+  <img src="{{ photo.thumbnailUrl }}" alt="" />
+  <h3>{{ photo.title }}</h3>
+</div>
